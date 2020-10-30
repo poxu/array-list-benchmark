@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayVsLinkedListBenchmark {
 
@@ -36,7 +35,7 @@ public class ArrayVsLinkedListBenchmark {
                     break;
             }
             for (int i = 0; i < size; i++) {
-                list.add(ThreadLocalRandom.current().nextInt());
+                list.add(Integer.MAX_VALUE);
             }
         }
     }
@@ -46,7 +45,7 @@ public class ArrayVsLinkedListBenchmark {
         final int middle = state.list.size() / 2;
         final ListIterator<Integer> iterator = state.list.listIterator(middle);
         for (int i = 0; i < 1_000_000; i++) {
-            iterator.add(i);
+            iterator.add(Integer.MAX_VALUE);
         }
         return state.list;
     }
