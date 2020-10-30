@@ -29,7 +29,7 @@ public class ArrayVsLinkedListBenchmark {
         public void setup() {
             switch (type) {
                 case "array":
-                    list = new ArrayList();
+                    list = new ArrayList<>();
                     break;
                 case "linked":
                     list = new LinkedList<>();
