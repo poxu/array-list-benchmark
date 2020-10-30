@@ -25,7 +25,7 @@ public class ArrayVsLinkedListBenchmark {
 
         public List<Integer> list;
 
-        @Setup(Level.Iteration)
+        @Setup(Level.Invocation)
         public void setup() {
             switch (type) {
                 case "array":
